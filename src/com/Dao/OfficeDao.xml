@@ -1,0 +1,15 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace = "com.Dao.OfficeDao">
+  <cache></cache>
+  <insert id = "addOffice">
+    insert into yun.office(officeid, officeMd5) values(#{officeid}, #{officeMd5})
+  </insert>
+
+  <select id = "getOfficeId" parameterType = "java.lang.String" resultType = "java.lang.String">
+    select officeid from yun.office where officeMd5 = #{officeMd5}
+  </select>
+</mapper>

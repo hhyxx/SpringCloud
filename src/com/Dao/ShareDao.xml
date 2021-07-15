@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace = "com.Dao.ShareDao">
+  <cache></cache>
+
+  <select id = "findShare" parameterType = "com.Bean.Share" resultType = "com.Bean.Share">
+    select * from share where shareUrl = #{shareUrl} and status = #{status}
+  </select>
+
+  <select id = "findShareByName" resultType = "com.Bean.Share">
+    select * from share where shareUser = #{username} and status = #{status}
+  </select>
+
+  <insert id = "shareFile" parameterType = "com.Bean.Share" >
+    insert into share(shareUrl, path, shareUser) values(#{shareUrl}, #{path}, #{shareUser})
+  </insert>
+
+  <update id = "cancelShare">
+    update share set status = #{status} where shareUrl = #{url} and path = #{filePath}
+  </update>
+
+</mapper>
