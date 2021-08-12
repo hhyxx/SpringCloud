@@ -1,6 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 
-<div style="width: 100%; height: 100%;background-color:#EFF4F8">
+<div style="width: 100%; height: 100%;background-color:#f6f6f6">
 	<div style="padding: 10px 0px 0px 0px;margin: 0px;">
 		<ul class="ul" style="list-style-type: none;font-size: 14px;list-style-position: outside;font-family: 'Microsoft YaHei',arial,SimSun,'宋体';padding-left: 0px">
 			<li style="width: 100%; height: 38px;padding: 0px;margin: 0px;">

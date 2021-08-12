@@ -23,14 +23,9 @@
 	<title></title>
 </head>
 <style type="text/css">
-	html
-	{
+	body {
 		weight:100%;
-		margin:0;
-	}
-	body
-	{
-		weight:100%;
+		height:100%;
 		margin:0;
 	}
 </style>
@@ -41,30 +36,30 @@
 </div>
 
 <!-- 图片轮播 -->
-<div class="slider" style = "height:100%; width:100%; margin:0px;">
-	<ul class="slider-main" style = "width:100%; margin:0px;">
-		<li class="slider-panel">
+<div class="slider" style = "height:100%; width:100%; margin:0px; position: absolute;">
+	<ul class="slider-main" style = "height:100%; width:100%; margin:0px; position: absolute;">
+		<li class="slider-panel" style = "height:100%;width:100%; margin:0px; position: absolute;">
 			<a href="#">
-				<img alt="yun网盘" title="yun网盘" src="${pageContext.request.contextPath }/img/a.jpg" style = "width:100%; margin:0px;">
+				<img alt="yun网盘" title="yun网盘" src="${pageContext.request.contextPath }/img/a.jpg" style = "height:100%;width:100%; margin:0px;">
 			</a>
 		</li>
-		<li class="slider-panel">
+		<li class="slider-panel" style = "height:100%;width:100%; margin:0px; position: absolute;">
 			<a href="#" >
-				<img alt="yun网盘"   src="${pageContext.request.contextPath }/img/d.jpg" style = "width:100%; margin:0px;">
+				<img alt="yun网盘" src="${pageContext.request.contextPath }/img/d.jpg" style = "height:100%;width:100%; margin:0px;">
 			</a>
 		</li>
-		<li class="slider-panel">
+		<li class="slider-panel" style = "height:100%;width:100%; margin:0px; ">
 			<a href="#" >
-				<img alt="yun网盘" title="yun网盘" src="${pageContext.request.contextPath }/img/g.jpg" style = "width:100%; margin:0px;">
+				<img alt="yun网盘" title="yun网盘" src="${pageContext.request.contextPath }/img/g.jpg" style = "height:100%;width:100%; margin:0px;">
 			</a>
 		</li>
-		<li class="slider-panel">
+		<li class="slider-panel" style = "height:100%;width:100%; margin:0px;">
 			<a href="#" >
-				<img alt="yun网盘" title="yun网盘" src="${pageContext.request.contextPath }/img/h.jpg" style = "width:100%; margin:0px;">
+				<img alt="yun网盘" title="yun网盘" src="${pageContext.request.contextPath }/img/h.jpg" style = "height:100%;width:100%; margin:0px;">
 			</a>
 		</li>
 	</ul>
-	<div class="slider-extra">
+	<div class="slider-extra" style="margin-top:210px;">
 		<ul class="slider-nav">
 			<li class="slider-item"></li>
 			<li class="slider-item"></li>
@@ -74,7 +69,7 @@
 	</div>
 </div>
 
-<div id="login">
+<div id="login" style="box-shadow: 1px 1px 1px 1px gray;">
 	<form action="user/login.action" method="post">
 		<div id="form-title">账号密码登录</div>
 		<input type="text" placeholder="用户名" name="username" class="login-input" id="name" />
@@ -82,7 +77,7 @@
 		<input type="checkbox" class="input" /><span class="ck_text">下次自动登录</span>
 		<input type="submit" value="登录" class="login-btn" /><br/>
 		<input type="submit" value="立即注册" class="login-btn" onclick="return regist()"/>
-		<div id="bottom">
+		<div id="bottom" >
 			<div id="inner">
 				<div class="inner">
 					<a href="#" class="a_inner">扫一扫登录</a>
