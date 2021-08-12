@@ -7,7 +7,7 @@ package com.Bean;
 public class Result<T> {
 	private int code; // 状态码
 	private boolean success; // 操作结果
-	private T data; // 存储 formData 的键值对集合
+	private T data; // 存储 formData 的键值对集合...
 	private String msg; // 状态信息
 	
 	public Result() {

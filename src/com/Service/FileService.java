@@ -101,8 +101,10 @@ public class FileService {
         String fileName = getRootPath();
         System.out.println(fileName);
         System.out.println(namespace);
+
         File file = new File(fileName, namespace);
         file.mkdir();
+
         for (String newFileName : DEFAULT_DIRECTORY) {
             File newFile = new File(file, newFileName);
             newFile.mkdir();

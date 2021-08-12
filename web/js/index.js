@@ -24,7 +24,8 @@ function selectCheckbox(){
 		$("#operation").hide();
 	}
 }
-/**获取文件列表*/
+
+/** 获取文件列表 */
 function getFiles(path) {
 	$.post("file/getFiles.action", {
 		"path" : path
@@ -34,7 +35,8 @@ function getFiles(path) {
 			$("#list").empty();
 			$("#checkAll").prop("checked",false);
 			$.each(data.data, function() {
-				$("#list").append('<tr><td><input onclick="selectCheckbox()" name="check_name" type="checkbox" aria-label="..."></td>' +
+				$("#list").append(
+				    '<tr><td><input onclick="selectCheckbox()" name="check_name" type="checkbox" aria-label="..."></td>' +
 					'<td width="60%"><a href="#" prePath="' + path +'" fileType="' + this.fileType +'" onclick="return openFile(this)"><span class="glyphicon glyphicon-'+this.fileType+'" style="margin-right: 10px"></span>' + this.fileName + '</a></td>' +
 					'<td width="32px">' +
 					'</td>' +
@@ -364,7 +366,7 @@ function moveto(){
 	}
 	return false;
 }
-/**查找文件*/
+/** 查找文件 */
 function searchFile(obj){
 	var reg = $(obj).prev().val();
 	if(reg.trim() == "" || reg.trim() == null){
@@ -397,7 +399,7 @@ function searchFile(obj){
 		});
 	}
 }
-/**分享文件*/
+/** 分享文件 */
 function share(obj){
 	var $check = $("input:checked").not($("#checkAll"));
 	if($check.length < 1){
@@ -434,7 +436,7 @@ function share(obj){
 	}
 	return false;
 }
-/**copy Url到粘贴板*/
+/** copy Url到粘贴板 */
 function copyUrl(obj){
 	obj.select();
 	var successful = document.execCommand('copy');
@@ -442,13 +444,13 @@ function copyUrl(obj){
 		layer.tips('复制成功', obj, {tips: 3});
 	}
 }
-/**拼接url*/
+/** 拼接url */
 function joinUrl(url){
 	var host = window.location.href;
 	host = host.substring(0, host.indexOf("/yun") + 5);
 	return host + "share.action?shareUrl=" + url;
 }
-/**打开我的分享*/
+/** 打开我的分享 */
 function openMyShare(){
 	changeShareTab(1);
 	layer.open({
@@ -458,7 +460,7 @@ function openMyShare(){
 		content: $("#shareTab")
 	});
 }
-/**分享面板切换*/
+/** 分享面板切换 */
 function changeShareTab(order){
 	$.post("searchShare.action",{
 			"status":order
